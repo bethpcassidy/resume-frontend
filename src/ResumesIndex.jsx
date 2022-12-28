@@ -7,6 +7,7 @@ export function ResumesIndex(props) {
           <h2>{resume.first_name}</h2>
           <h2>{resume.last_name}</h2>
           <img src={resume.image_url} />
+          <button onClick={() => props.onShowResumes(resume)}>More Info</button>
         </div>
       ))}
     </div>

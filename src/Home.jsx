@@ -1,6 +1,7 @@
 import { ResumesIndex } from "./ResumesIndex";
 import { useState, useEffect } from "react";
 // import axios from "axios";
+import { ResumesShow } from "./ResumesShow";
 
 export function Home() {
   const resumes = [
@@ -23,6 +24,8 @@ export function Home() {
   return (
     <div>
       <ResumesIndex resumes={resumes} />
+
+      <ResumesShow resume={currentResume} />
     </div>
   );
 }
