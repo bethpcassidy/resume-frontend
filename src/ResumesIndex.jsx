@@ -12,7 +12,7 @@ export function ResumesIndex(props) {
               {resume.last_name}
             </h2>
             <div>
-              <img src={resume.image_url} className="card-img-top rounded mx-auto d-block" alt="" />
+              <img src={resume.photo_url} className="card-img-top rounded mx-auto d-block" alt="" />
             </div>
           </div>
         ))}
