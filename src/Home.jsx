@@ -10,13 +10,13 @@ export function Home() {
       last_name: "Hanks",
       email: "hanks@hollywood.com",
       phone_number: "555-555-5555",
-      bio: "castaway",
+      short_bio: "castaway",
       linkedin_url: "linkedin.com",
       twitter_handle: "@hanksinator",
-      personal_url: "tomhanksmovies.com",
-      online_resume: "link",
+      personal_website_url: "tomhanksmovies.com",
+      online_resume_url: "link",
       github_url: "link2",
-      image_url: "link3",
+      photo_url: "link3",
     },
   ];
 
