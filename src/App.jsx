@@ -17,7 +17,7 @@ function App() {
       </div>
       <h1>Colton Peckham</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>Count clicker is {count}</button>
+        <button onClick={() => setCount((count) => count + 1)}>Count clicker is {count} clicks</button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
