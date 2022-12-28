@@ -1,5 +1,6 @@
 import { ResumesIndex } from "./ResumesIndex";
 import { useState, useEffect } from "react";
+import { Modal } from "./Modal";
 // import axios from "axios";
 import { ResumesShow } from "./ResumesShow";
 
@@ -20,12 +21,29 @@ export function Home() {
       photo_url: "link3",
     },
   ];
-
+  const [isResumesShowVisible, setIsResumesShowVisible] = useState(false);
+  const [currentResume, setCurrentResume] = useState({});
+  const handleShowResume = (resume) => {
+    console.log("handleShowResume", resume);
+    setIsResumesShowVisible(true);
+    setCurrentResume(resume);
+  };
+  const handleClose = () => {
+    console.log("handleClose");
+    setIsResumesShowVisible(false);
+  };
   return (
     <div>
+
       <ResumesIndex resumes={resumes} />
 
       <ResumesShow resume={currentResume} />
+
+      <ResumesIndex resumes={resumes} onShowResume={handleShowResume} />
+      <Modal show={isResumesShowVisible} onClose={handleClose}>
+        <h1>Test</h1>
+      </Modal>
+
     </div>
   );
 }
