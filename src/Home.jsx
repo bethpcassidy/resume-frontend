@@ -1,11 +1,11 @@
-import { ResumesIndex } from "./ResumesIndex";
+import { StudentsIndex } from "./StudentsIndex";
 import { useState, useEffect } from "react";
 import { Modal } from "./Modal";
 // import axios from "axios";
-import { ResumesShow } from "./ResumesShow";
+import { StudentsShow } from "./StudentsShow";
 
 export function Home() {
-  const resumes = [
+  const students = [
     {
       id: 1,
       first_name: "Tom",
@@ -50,25 +50,20 @@ export function Home() {
     },
   ];
 
-  const [isResumesShowVisible, setIsResumesShowVisible] = useState(false);
-  const [currentResume, setCurrentResume] = useState({});
-
-  const handleShowResume = (resume) => {
-    console.log("handleShowResume", resume);
-    setIsResumesShowVisible(true);
-    setCurrentResume(resume);
+  const [isStudentsShowVisible, setIsStudentsShowVisible] = useState(false);
+  const [currentStudent, setCurrentStudent] = useState({});
   };
   const handleClose = () => {
     console.log("handleClose");
-    setIsResumesShowVisible(false);
+    setIsStudentsShowVisible(false);
   };
 
   return (
     <div>
-      <ResumesIndex resumes={resumes} onShowResumes={handleShowResume} />
-      <Modal show={isResumesShowVisible} onClose={handleClose}>
+      <StudentsIndex students={students} onShowStudents={handleShowStudent} />
+      <Modal show={isStudentsShowVisible} onClose={handleClose}>
         <h1>Test</h1>
-        <ResumesShow resume={currentResume} />
+        <StudentsShow student={currentStudent} />
       </Modal>
     </div>
   );
