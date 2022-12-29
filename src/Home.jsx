@@ -52,7 +52,7 @@ export function Home() {
 
   const [isStudentsShowVisible, setIsStudentsShowVisible] = useState(false);
   const [currentStudent, setCurrentStudent] = useState({});
-  };
+
   const handleClose = () => {
     console.log("handleClose");
     setIsStudentsShowVisible(false);
