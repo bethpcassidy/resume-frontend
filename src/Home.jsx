@@ -21,8 +21,10 @@ export function Home() {
       photo_url: "https://live.staticflickr.com/8389/8514564783_15746cbefc_m.jpg",
     },
   ];
+
   const [isResumesShowVisible, setIsResumesShowVisible] = useState(false);
   const [currentResume, setCurrentResume] = useState({});
+
   const handleShowResume = (resume) => {
     console.log("handleShowResume", resume);
     setIsResumesShowVisible(true);
