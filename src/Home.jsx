@@ -1,6 +1,8 @@
 import { ResumesIndex } from "./ResumesIndex";
 import { useState, useEffect } from "react";
+import { Modal } from "./Modal";
 // import axios from "axios";
+import { ResumesShow } from "./ResumesShow";
 
 export function Home() {
   const resumes = [
@@ -19,10 +21,24 @@ export function Home() {
       photo_url: "https://live.staticflickr.com/8389/8514564783_15746cbefc_m.jpg",
     },
   ];
-
+  const [isResumesShowVisible, setIsResumesShowVisible] = useState(false);
+  const [currentResume, setCurrentResume] = useState({});
+  const handleShowResume = (resume) => {
+    console.log("handleShowResume", resume);
+    setIsResumesShowVisible(true);
+    setCurrentResume(resume);
+  };
+  const handleClose = () => {
+    console.log("handleClose");
+    setIsResumesShowVisible(false);
+  };
   return (
     <div>
-      <ResumesIndex resumes={resumes} />
+      <ResumesIndex resumes={resumes} onShowResumes={handleShowResume} />
+      <Modal show={isResumesShowVisible} onClose={handleClose}>
+        <h1>Test</h1>
+        <ResumesShow resume={currentResume} />
+      </Modal>
     </div>
   );
 }
