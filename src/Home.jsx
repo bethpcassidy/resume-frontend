@@ -34,9 +34,7 @@ export function Home() {
   };
   return (
     <div>
-      <ResumesIndex resumes={resumes} />
-
-      <ResumesIndex resumes={resumes} onShowResume={handleShowResume} />
+      <ResumesIndex resumes={resumes} onShowResumes={handleShowResume} />
       <Modal show={isResumesShowVisible} onClose={handleClose}>
         <h1>Test</h1>
         <ResumesShow resume={currentResume} />
