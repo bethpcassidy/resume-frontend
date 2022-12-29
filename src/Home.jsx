@@ -54,11 +54,45 @@ export function Home() {
   const [isStudentsShowVisible, setIsStudentsShowVisible] = useState(false);
   const [currentStudent, setCurrentStudent] = useState({});
 
+  // const [currentExperiences, setCurrentExperiences] = useState({});
+  // const [currentCapstones, setCurrentCapstones] = useState({});
+  // const [currentSkills, setCurrentSkills] = useState({});
+  // const [currentEducations, setCurrentEducations] = useState({});
+
   const handleShowStudent = (student) => {
     console.log("handleShowStudent", student);
     setIsStudentsShowVisible(true);
     setCurrentStudent(student);
   };
+
+  // const handleShowExperiences = (experience) => {
+  //   axios.get("http://localhost:3000/experiences.json").then((response) => {
+  //     console.log(response.data);
+  //     setCurrentExperiences(response.data);
+  //   });
+  // };
+
+  // const handleShowCapstones = (capstone) => {
+  //   axios.get("http://localhost:3000/capstones.json").then((response) => {
+  //     console.log(response.data);
+  //     setCurrentCapstones(response.data);
+  //   });
+  // };
+
+  // const handleShowEducations = (education) => {
+  //   axios.get("http://localhost:3000/educations.json").then((response) => {
+  //     console.log(response.data);
+  //     setCurrentEducations(response.data);
+  //   });
+  // };
+
+  // const handleShowSkills = (skill) => {
+  //   axios.get("http://localhost:3000/skill.json").then((response) => {
+  //     console.log(response.data);
+  //     setCurrentSkills(response.data);
+  //   });
+  // };
+
   const handleClose = () => {
     console.log("handleClose");
     setIsStudentsShowVisible(false);
