@@ -53,6 +53,7 @@ export function Home() {
 
   const [isResumesShowVisible, setIsResumesShowVisible] = useState(false);
   const [currentResume, setCurrentResume] = useState({});
+
   const handleShowResume = (resume) => {
     console.log("handleShowResume", resume);
     setIsResumesShowVisible(true);

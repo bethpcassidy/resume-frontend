@@ -3,10 +3,13 @@ export function ResumesShow(props) {
     <div>
       <h1>Resume</h1>
 
+
+
       <div class="float-end">
         <img src={props.resume.photo_url} />
       </div>
       <br></br>
+
 
 
       <p>First_name: {props.resume.first_name}</p>
@@ -20,6 +23,16 @@ export function ResumesShow(props) {
       <p>Online_resume_url: {props.resume.online_resume_url}</p>
       <p>Github_url: {props.resume.github_url}</p>
 
+      <p>Photo_url: {props.resume.photo_url}</p>
+
+      <h1>Experience</h1>
+      <h2>Company: {props.resume.company_name}</h2>
+      <h4>Job Title: {props.resume.job_title}</h4>
+      <p>Start Date: {props.resume.start_date}</p>
+      <p>End Date: {props.resume.end_date}</p>
+      <p>Job Description:{props.resume.details}</p>
+
+
 
       <p>Photo_url: {props.resume.photo_url}</p>
 
@@ -30,6 +43,7 @@ export function ResumesShow(props) {
       <p>Degree: {props.resume.degree}</p>
       <p>University_name: {props.resume.university_name}</p>
       <p>Details: {props.resume.details}</p>
+
 
     </div>
   );
