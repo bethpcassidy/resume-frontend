@@ -32,7 +32,7 @@ export function StudentsShow(props) {
       <p>Start Date: {props.student.start_date}</p>
       <p>End Date: {props.student.end_date}</p>
       <p>Job Description:{props.student.details}</p>
-      <p>Photo_url: {props.student.photo_url}</p>
+
       <h1> Education </h1>
       <p>Student_id: {props.student.student_id}</p>
       <p>Start_date: {props.student.start_date}</p>
