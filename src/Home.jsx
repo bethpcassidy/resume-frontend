@@ -62,6 +62,7 @@ export function Home() {
     console.log("handleClose");
     setIsResumesShowVisible(false);
   };
+
   return (
     <div>
       <ResumesIndex resumes={resumes} onShowResumes={handleShowResume} />
