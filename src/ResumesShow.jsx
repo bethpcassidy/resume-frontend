@@ -13,6 +13,15 @@ export function ResumesShow(props) {
       <p>Online_resume_url: {props.resume.Online_resume_url}</p>
       <p>Github_url: {props.resume.Github_url}</p>
       <p>Photo_url: {props.resume.Photo_url}</p>
+
+      <h1>Skills</h1>
+      <li>Skill Name {props.resume.skill} </li>
+
+      <h2>Capstone</h2>
+      <p>Name {props.resume.capstone} </p>
+      <p>Description {props.resume.description} </p>
+      <p>URL {props.resume.url} </p>
+      <p>Screenshot {props.resume.screenshot} </p>
     </div>
   );
 }
