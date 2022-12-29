@@ -90,6 +90,7 @@ export function Home() {
     setIsStudentsShowVisible(false);
   };
 
+
   return (
     <div>
       <StudentsIndex students={students} onShowStudents={handleShowStudent} />
