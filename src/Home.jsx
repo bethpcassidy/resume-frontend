@@ -18,7 +18,7 @@ export function Home() {
       personal_website_url: "tomhanksmovies.com",
       online_resume_url: "link",
       github_url: "link2",
-      photo_url: "link3",
+      photo_url: "https://live.staticflickr.com/8389/8514564783_15746cbefc_m.jpg",
     },
   ];
   const [isResumesShowVisible, setIsResumesShowVisible] = useState(false);
@@ -34,16 +34,11 @@ export function Home() {
   };
   return (
     <div>
-
-      <ResumesIndex resumes={resumes} />
-
-      <ResumesShow resume={currentResume} />
-
-      <ResumesIndex resumes={resumes} onShowResume={handleShowResume} />
+      <ResumesIndex resumes={resumes} onShowResumes={handleShowResume} />
       <Modal show={isResumesShowVisible} onClose={handleClose}>
         <h1>Test</h1>
+        <ResumesShow resume={currentResume} />
       </Modal>
-
     </div>
   );
 }
