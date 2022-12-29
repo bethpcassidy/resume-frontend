@@ -77,18 +77,18 @@ export function Home() {
 
   // useEffect(handleIndexStudents, []);
 
-  // const [isStudentsShowVisible, setIsStudentsShowVisible] = useState(false);
-  // const [currentStudent, setCurrentStudent] = useState({});
+  const [isStudentsShowVisible, setIsStudentsShowVisible] = useState(false);
+  const [currentStudent, setCurrentStudent] = useState({});
 
-  // const handleShowStudent = (student) => {
-  //   console.log("handleShowStudent", student);
-  //   setIsStudentsShowVisible(true);
-  //   setCurrentStudent(student);
-  // };
-  // const handleClose = () => {
-  //   console.log("handleClose");
-  //   setIsStudentsShowVisible(false);
-  // };
+  const handleShowStudent = (student) => {
+    console.log("handleShowStudent", student);
+    setIsStudentsShowVisible(true);
+    setCurrentStudent(student);
+  };
+  const handleClose = () => {
+    console.log("handleClose");
+    setIsStudentsShowVisible(false);
+  };
 
   return (
     <div>
