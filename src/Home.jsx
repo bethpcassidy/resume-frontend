@@ -19,7 +19,7 @@ export function Home() {
       personal_website_url: "tomhanksmovies.com",
       online_resume_url: "link",
       github_url: "link2",
-      photo_url: "https://live.staticflickr.com/8389/git8514564783_15746cbefc_m.jpg",
+      photo_url: "https://live.staticflickr.com/8389/8514564783_15746cbefc_m.jpg",
     },
     {
       id: 1,
@@ -54,6 +54,11 @@ export function Home() {
   const [isStudentsShowVisible, setIsStudentsShowVisible] = useState(false);
   const [currentStudent, setCurrentStudent] = useState({});
 
+  const handleShowStudent = (student) => {
+    console.log("handleShowStudent", student);
+    setIsStudentsShowVisible(true);
+    setCurrentStudent(student);
+  };
   const handleClose = () => {
     console.log("handleClose");
     setIsStudentsShowVisible(false);
