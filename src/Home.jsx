@@ -49,6 +49,8 @@ export function Home() {
       photo_url: "https://live.staticflickr.com/592/22586206367_fb97ac43cb_m.jpg",
     },
   ];
+
+
   const [isResumesShowVisible, setIsResumesShowVisible] = useState(false);
   const [currentResume, setCurrentResume] = useState({});
   const handleShowResume = (resume) => {
