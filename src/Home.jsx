@@ -49,10 +49,37 @@ export function Home() {
       github_url: "link2",
       photo_url: "https://live.staticflickr.com/592/22586206367_fb97ac43cb_m.jpg",
     },
+    {
+      id: 1,
+      first_name: "John",
+      last_name: "Adams",
+      email: "hanks@hollywood.com",
+      phone_number: "555-555-5555",
+      short_bio: "castaway",
+      linkedin_url: "linkedin.com",
+      twitter_handle: "@hanksinator",
+      personal_website_url: "tomhanksmovies.com",
+      online_resume_url: "link",
+      github_url: "link2",
+      photo_url: "https://live.staticflickr.com/592/22586206367_fb97ac43cb_m.jpg",
+    },
   ];
 
-  const [isStudentsShowVisible, setIsStudentsShowVisible] = useState(false);
-  const [currentStudent, setCurrentStudent] = useState({});
+  // const [students, setStudents] = useState([]);
+
+  // const handleIndexStudents = () => {
+  //   console.log("handleIndexStudents");
+  //   axios.get("http://localhost:3000/students.json").then((response) => {
+  //     console.log(response.data);
+  //     setStudents(response.data);
+  //   });
+  // };
+
+  // useEffect(handleIndexStudents, []);
+
+  // const [isStudentsShowVisible, setIsStudentsShowVisible] = useState(false);
+  // const [currentStudent, setCurrentStudent] = useState({});
+
 
   // const [currentExperiences, setCurrentExperiences] = useState({});
   // const [currentCapstones, setCurrentCapstones] = useState({});
@@ -98,6 +125,17 @@ export function Home() {
     setIsStudentsShowVisible(false);
   };
 
+  // const handleShowStudent = (student) => {
+  //   console.log("handleShowStudent", student);
+  //   setIsStudentsShowVisible(true);
+  //   setCurrentStudent(student);
+  // };
+  // const handleClose = () => {
+  //   console.log("handleClose");
+  //   setIsStudentsShowVisible(false);
+  // };
+
+
   return (
     <div>
       <StudentsIndex students={students} onShowStudents={handleShowStudent} />
@@ -108,31 +146,3 @@ export function Home() {
     </div>
   );
 }
-
-//   {
-//     id: 1,
-//     first_name: "Tom",
-//     last_name: "Hanks",
-//     email: "hanks@hollywood.com",
-//     phone_number: "555-555-5555",
-//     bio: "castaway",
-//     linkedin_url: "linkedin.com",
-//     twitter_handle: "@hanksinator",
-//     personal_url: "tomhanksmovies.com",
-//     online_resume: "link",
-//     github_url: "link2",
-//     image_url: "link3",
-//   },
-// ];
-
-// const [resumes, setResumes] = useState([]);
-
-// const handleIndexResumes = () => {
-//   console.log("handleIndexResumes");
-//   axios.get("http://localhost:3000/resumes.json").then((response) => {
-//     console.log(response.data);
-//     setResumes(response.data);
-//   });
-// };
-
-// useEffect(handleIndexResumes, []);
