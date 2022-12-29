@@ -3,16 +3,24 @@ export function ResumesIndex(props) {
     <div id="resume-index">
       <h1 className="text-center">Resumes!!</h1>
       <br />
-      <div className="posts row text-bg-success mb-3">
+      <div className="posts row text-bg-light mb-3">
         {props.resumes.map((resume) => (
           <div className="col-4" key={resume.id}>
             <br />
             <h2 className="card-title text-center">
-              {resume.first_name}
-              {resume.last_name}
+              {resume.last_name}, {resume.first_name}
             </h2>
+            <br />
             <div>
               <img src={resume.photo_url} className="card-img-top rounded mx-auto d-block" alt="" />
+            </div>
+            <br />
+            <div className="d-grid gap-2 mx-auto">
+              <button className="btn btn-dark" onClick={() => props.onShowResumes(resume)}>
+                More Info
+              </button>
+              <br />
+              <br />
             </div>
           </div>
         ))}
