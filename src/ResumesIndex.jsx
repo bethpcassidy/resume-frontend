@@ -42,7 +42,7 @@ export function ResumesIndex(props) {
   );
 }
 
-// <div>
+/* // <div>
 //   <h1>All Resumes</h1>
 //   {props.resumes.map((resume) => (
 //     <div key={resume.id}>
@@ -51,4 +51,4 @@ export function ResumesIndex(props) {
 //       <img src={resume.image_url} />
 //     </div>
 //   ))}
-// </div>
+// </div> */
