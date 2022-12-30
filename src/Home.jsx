@@ -1,14 +1,14 @@
 import { StudentsIndex } from "./StudentsIndex";
 import { useState, useEffect } from "react";
 import { Modal } from "./Modal";
+import axios from "axios";
 
-// import axios from "axios";
 import { StudentsShow } from "./StudentsShow";
 import { ExperiencesShow } from "./ExperiencesShow";
 
 export function Home() {
   const [students, setStudents] = useState([]);
-  // const [experiences, setExperiences] = useState([]);
+  // const [experience, setExperiences] = useState([]);
   const [isStudentsShowVisible, setIsStudentsShowVisible] = useState(false);
   const [currentStudent, setCurrentStudent] = useState({});
 
@@ -59,7 +59,7 @@ export function Home() {
     setIsStudentsShowVisible(false);
   };
 
-  // useEffect(handleIndexStudents, []);
+  useEffect(handleIndexStudents, []);
 
   return (
     <div>
@@ -67,7 +67,7 @@ export function Home() {
       <Modal show={isStudentsShowVisible} onClose={handleClose}>
         <h1>Test</h1>
         <StudentsShow student={currentStudent} />
-        <ExperiencesShow experiences={experiences} />
+        {/* <ExperiencesShow experiences={experiences} /> */}
       </Modal>
     </div>
   );
