@@ -14,8 +14,10 @@ export function StudentsShow(props) {
       <p>Online_resume_url: {props.student.online_resume_url}</p>
       <p>Github_url: {props.student.github_url}</p>
       <p>Photo_url: {props.student.photo_url}</p>
+
       <h1>Skills</h1>
       <li>Skill Name {props.student.skill} </li>
+
       <h2>Capstone</h2>
       <p>Name {props.student.capstone} </p>
       <p>Description {props.student.description} </p>
@@ -25,13 +27,6 @@ export function StudentsShow(props) {
         <img src={props.student.photo_url} />
       </div>
       <br></br>
-
-      <h1>Experience</h1>
-      <h2>Company: {props.student.company_name}</h2>
-      <h4>Job Title: {props.student.job_title}</h4>
-      <p>Start Date: {props.student.start_date}</p>
-      <p>End Date: {props.student.end_date}</p>
-      <p>Job Description:{props.student.details}</p>
 
       <h1> Education </h1>
       <p>Student_id: {props.student.student_id}</p>
