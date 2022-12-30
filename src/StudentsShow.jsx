@@ -15,7 +15,7 @@ export function StudentsShow(props) {
       <p>Github_url: {props.student.github_url}</p>
       <p>Photo_url: {props.student.photo_url}</p>
 
-      <h1>Skills</h1>
+      {/* <h1>Skills</h1>
       <li>Skill Name {props.student.skill} </li>
 
       <h2>Capstone</h2>
@@ -34,7 +34,7 @@ export function StudentsShow(props) {
       <p>End_date: {props.student.end_date}</p>
       <p>Degree: {props.student.degree}</p>
       <p>University_name: {props.student.university_name}</p>
-      <p>Details: {props.student.details}</p>
+      <p>Details: {props.student.details}</p> */}
     </div>
   );
 }
